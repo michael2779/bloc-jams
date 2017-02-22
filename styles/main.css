@@ -38,6 +38,10 @@ html {
      /* #3 */
      text-decoration: none;
  }
+
+.navbar .links-container:active {
+    background-color: white;
+}
  
  .links-container .navbar-link {
      display: table-cell;
