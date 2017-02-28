@@ -30,6 +30,22 @@
      ]
  };
 
+ // Assignment Album
+ var darkSide = {
+     title: 'Dark Side of the Moon',
+     artist: 'Pink Floyd',
+     label: 'EMI',
+     year: '1973',
+     albumArtUrl: 'assets/images/album_covers/20.png',
+     songs: [
+         { title: 'Breath', duration: '2:43' },
+         { title: 'Time', duration: '6:53' },
+         { title: 'The Great Gig in the Sky', duration: '4:15'},
+         { title: 'Money', duration: '6:30' },
+         { title: 'Us and Them', duration: '7:51'}
+     ]
+ };
+
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -66,5 +82,24 @@ var setCurrentAlbum = function(album) {
  };
  
  window.onload = function() {
-     setCurrentAlbum(albumPicasso);
+     setCurrentAlbum(darkSide);
+     
+     var whichAlbum = 1;
+     
+     var albumCurrent = document.getElementsByClassName('album-cover-art')[0].addEventListener("click", changeAlbum);
+     
+     
+     function changeAlbum () {
+        
+         if (whichAlbum ==1 ){
+             setCurrentAlbum(albumMarconi);
+             whichAlbum =2;
+         }else if (whichAlbum == 2){
+             setCurrentAlbum(darkSide);
+             whichAlbum =3;
+         }else if (whichAlbum == 3) {
+             setCurrentAlbum(albumPicasso);
+             whichAlbum =1;
+         }
+     }
  };
