@@ -4,7 +4,7 @@ var setSong = function (songNumber) {
 } 
 
 var getSongNumberCell = function(number){
-    return $('.song-item-number[data-song-number="' + number + '"']');
+    return $('.song-item-number[data-song-number="' + number + '"]');
 }
 
 
@@ -25,7 +25,7 @@ var clickHandler = function() {
 
 	if (currentlyPlayingSongNumber !== null) {
 		// Revert to song number for currently playing song because user started playing new song.
-		var currentlyPlayingCell =   getSongNumberCell (currentlyPlayingSongNumber);                 //   $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
+		var currentlyPlayingCell = getSongNumberCell (currentlyPlayingSongNumber);                 //   $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
 		currentlyPlayingCell.html(currentlyPlayingSongNumber);
 	}
 	if (currentlyPlayingSongNumber !== songNumber) {
